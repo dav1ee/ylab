@@ -6,6 +6,7 @@ export const ERROR_MESSAGES = {
   },
   password: {
     required: 'Password is required',
-    exceed: 'Password cannot exceed 50 characters'
+    exceed: 'Password cannot exceed 50 characters',
+    spaces: 'Password cannot contain spaces'
   }
 } as const;

@@ -15,6 +15,7 @@ export const formScheme = z.object({
     .string()
     .min(1, { message: ERROR_MESSAGES.password.required })
     .max(50, { message: ERROR_MESSAGES.password.exceed })
+    .refine((password) => !/\s/.test(password), ERROR_MESSAGES.password.spaces)
 });
 
 export type FormScheme = z.infer<typeof formScheme>;
